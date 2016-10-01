@@ -5,3 +5,15 @@
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
     background-color: #218c51;
 }
+
+.progress-bar{
+	background-color: #25b767;
+}
+
+.progress-bar-danger {
+    background-color: #e74c3c;
+}
+
+.progress-bar-warning {
+    background-color: #f39c12;
+}
