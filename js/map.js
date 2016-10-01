@@ -13,7 +13,7 @@ $(function () {
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};
 				
-                var map = new google.maps.Map(mapCanvas, mapOptions);
+        var map = new google.maps.Map(mapCanvas, mapOptions);
 
 				var truck = new google.maps.Marker({
 				position: trucklocation,

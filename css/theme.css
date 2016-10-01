@@ -19,3 +19,13 @@
     border-left-width: 1px;
     border-color: rgba(71, 0, 255, 0.49);
 }
+
+#map_canvas{
+	width: 0px !important;
+	height: 0px !important;
+}
+
+.fetch{
+	width: 100%;
+	background-color: #a6daad;
+}
