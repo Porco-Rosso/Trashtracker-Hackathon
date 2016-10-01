@@ -13,10 +13,31 @@ $(function () {
 				};
 				var map = new google.maps.Map(mapCanvas, mapOptions);
 
+<<<<<<< Updated upstream
 				var marker = new google.maps.Marker({
 					position: maporigin,
 					map: map,
 				});
+=======
+        
+        var infowindow = new google.maps.InfoWindow();        
+        var marker, i;
+        for (i = 0; i < placemarkers.length; i++) {  
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(marcadores[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+      }
+
+
+    }
+>>>>>>> Stashed changes
 
 				var marker, i;
 
