@@ -1,7 +1,7 @@
 $(function () {
 	var html = "";
 	// Do something with the returned Parse.Object values
-	html += '<table class="table"><thead><tr><th>Name</th><th>Latitude</th><th>longitude</th><th>percentage full</th></tr></thead>';
+	html += '<table class="table"><thead><tr><th>Name</th><th>Latitude</th><th>Longitude</th><th>Percentage full</th></tr></thead>';
 	for (var i = 0; i < placemarkers.length; i++) {
 
 		html += "<tr><td>" + placemarkers[i][0] + "</td>";
