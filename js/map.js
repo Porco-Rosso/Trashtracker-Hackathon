@@ -29,9 +29,11 @@ $(function () {
                     //var marker_lat   = placemarkers[i][1];
                     //var marker_lng   = placemarkers[i][2];
                     //var marker_state = placemarkers[i][3];
+                    //var marker_color = placemarkers[i][4];
 
 					marker = new google.maps.Marker({
 						position: new google.maps.LatLng(placemarkers[i][1], placemarkers[i][2]),
+                        icon: 'http://maps.google.com/mapfiles/ms/icons/'+placemarkers[i][4]+'-dot.png'
 						map: map
 					});
 				
