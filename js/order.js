@@ -16,6 +16,12 @@ var map = new google.maps.Map(mapCanvas, mapOptions);
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 
+var truck = new google.maps.Marker({
+            position: new google.maps.LatLng(40.4379571, -3.6896047),
+            map: map,
+            icon: 'images/truck-logo-small.png'
+                    });
+        
 
   function calcRoute() {
 
@@ -24,8 +30,6 @@ var map = new google.maps.Map(mapCanvas, mapOptions);
                 var second = new google.maps.LatLng(40.432049, -3.678102);
 								var third = new google.maps.LatLng(40.425209, -3.684310);
 		var end = "40.429244, -3.686070";
-		
-
 		
 		
     var request = {
