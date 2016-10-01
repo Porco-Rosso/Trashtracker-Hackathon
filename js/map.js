@@ -14,33 +14,35 @@ $(function () {
 				var map = new google.maps.Map(mapCanvas, mapOptions);
 
 
-				var marker = new google.maps.Marker({
-					position: maporigin,
-					map: map,
-				});
+				var truck = new google.maps.Marker({
+				position: maporigin,
+				map: map,
+				icon: 'http://maps.google.com/mapfiles/ms/icons/truck.png'
+                });
         
                 var infowindow = new google.maps.InfoWindow();        
                 var marker, i;
 
 				for (i = 0; i < placemarkers.length; i++) {
                     
-                    var marker_name  = placemarkers[i][0];
-                    var marker_lat   = placemarkers[i][1];
-                    var marker_lng   = placemarkers[i][2];
-                    var marker_state = placemarkers[i][3];
+                    //var marker_name  = placemarkers[i][0];
+                    //var marker_lat   = placemarkers[i][1];
+                    //var marker_lng   = placemarkers[i][2];
+                    //var marker_state = placemarkers[i][3];
 
 					marker = new google.maps.Marker({
-						position: new google.maps.LatLng(marker_lat, marker_lng),
+						position: new google.maps.LatLng(placemarkers[i][1], placemarkers[i][2]),
 						map: map
 					});
 				
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
-                        infowindow.setContent(marker_name + '<br/>' + marker_state);
-                        //infowindow.setContent(marker_state);
+                        infowindow.setContent(placemarkers[i][0]+ '<br/>' + placemarkers[i][3]);
                         infowindow.open(map, marker);
                     }
-                })(marker, i));
+                
+                    })(marker, i));
+                
                 }	
         }
 		google.maps.event.addDomListener(window, 'load', initMap);
