@@ -23,6 +23,28 @@ var truck = new google.maps.Marker({
             map: map,
             icon: 'images/truck-logo-small.png'
                     });
+
+
+var first = new google.maps.Marker({
+            position: new google.maps.LatLng(40.436257, -3.685320),
+            map: map,
+            icon: 'images/trash.png'
+                    });
+var second = new google.maps.Marker({
+            position: new google.maps.LatLng(40.432049, -3.678102),
+            map: map,
+            icon: 'images/trash.png'
+                    });
+var third = new google.maps.Marker({
+            position: new google.maps.LatLng(40.425209, -3.684310),
+            map: map,
+            icon: 'images/trash.png'
+                    });
+var fourth = new google.maps.Marker({
+            position: new google.maps.LatLng(40.429244, -3.686070),
+            map: map,
+            icon: 'images/trash.png'
+                    });
         
 
   function calcRoute() {
