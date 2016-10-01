@@ -2,12 +2,13 @@ $(function () {
 
 			function initMap() {
 
-				var maporigin = new google.maps.LatLng(40.4379571, -3.6896047);
+				var maporigin = new google.maps.LatLng(40.432759, -3.681806);
+				var trucklocation = new google.maps.LatLng(40.4379571, -3.6896047);
 
 				var mapCanvas = document.getElementById('map');
 				var mapOptions = {
 					center: maporigin,
-					zoom: 16,
+					zoom: 15,
 					panControl: false,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};
@@ -15,7 +16,7 @@ $(function () {
                 var map = new google.maps.Map(mapCanvas, mapOptions);
 
 				var truck = new google.maps.Marker({
-				position: maporigin,
+				position: trucklocation,
 				map: map,
 				icon: 'http://maps.google.com/mapfiles/ms/icons/truck.png'
                 });
@@ -37,7 +38,7 @@ $(function () {
 				
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
-                            infowindow.setContent(placemarkers[i][0]+ '<br/>' + placemarkers[i][3]);
+                            infowindow.setContent(placemarkers[i][0]+ '<br/>' + placemarkers[i][3] +'%');
                             infowindow.open(map, marker);
                         }
                     
