@@ -6,3 +6,7 @@ This is the repository for the frontend code of Trashtracker, a project for #Hac
 <img src="images/screen1.png">
 <br><br>
 <img src="images/screen2.png">
+<br><br>
+<img src="images/mockup/mockup1.png">
+<br><br>
+<img src="images/mockup/mockup2.png">
