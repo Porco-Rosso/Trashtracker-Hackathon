@@ -29,3 +29,17 @@
 	width: 100%;
 	background-color: #a6daad;
 }
+
+.progress{
+	height:20px;
+}
+
+.progress .progress-bar{
+	line-height: 20px;
+}
+
+.navbar-brand{
+	font-size: 3em;
+	margin-top: -10px;
+	font-family: 'Piedra', cursive;
+}

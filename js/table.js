@@ -8,17 +8,17 @@ $(function () {
 		html += "<td>" + placemarkers[i][1] + "</td>";
 		html += "<td>" + placemarkers[i][2] + "</td>";
 		if (placemarkers[i][3] > 79) {
-			html += '<td><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-danger" role="progressbar" style="min-width: 2em; width: ' + placemarkers[i][3] + '%;">' + placemarkers[i][3] + '%</div>';
+			html += '<td><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar" style="min-width: 2em; width: ' + placemarkers[i][3] + '%;">' + placemarkers[i][3] + '%</div>';
 		} else {
 
 			if (placemarkers[i][3] > 69) {
-				html += '<td><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-warning" role="progressbar" style="min-width: 2em; width: ' + placemarkers[i][3] + '%;">' + placemarkers[i][3] + '%</div>';
+				html += '<td><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-warning active" role="progressbar" style="min-width: 2em; width: ' + placemarkers[i][3] + '%;">' + placemarkers[i][3] + '%</div>';
 			} else {
-				html += '<td><div class="progress"><div class="progress-bar progress-bar-striped" role="progressbar" style="min-width: 2em; width: ' + placemarkers[i][3] + '%;">' + placemarkers[i][3] + '%</div>';
+				html += '<td><div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" style="min-width: 2em; width: ' + placemarkers[i][3] + '%;">' + placemarkers[i][3] + '%</div>';
 			}
 		}
 		
-		var cumulative = '<div class="progress-bar progress-bar-striped cumulativeelement" style="min-width: 2em; width: '+ placemarkers[i][3]/placemarkers.length +'%"><span>'+placemarkers[i][3]+'</span>';
+		var cumulative = '<div class="progress-bar progress-bar-striped active cumulativeelement" style="min-width: 2em; width: '+ placemarkers[i][3]/placemarkers.length +'%"><span>'+placemarkers[i][3]+'</span>';
 		
 		$("#cumulativebar").append(cumulative);
 		
