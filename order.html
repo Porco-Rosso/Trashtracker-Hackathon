@@ -52,7 +52,12 @@
     <div class="container theme-showcase" role="main">			
 
         <div id="map" class="well trashmap"></div>
-
+                <div id="map_canvas" style="width:710px; height:300px"></div>   
+            <form action="" onsubmit="calcRoute();return false;" id="routeForm">
+                <input type="text" id="routeStart" value="">
+                <input type="submit" value="Route plannen">
+            </form>
+        <div id="directionsPanel"></div>
 			
     </div> <!-- /container -->
 
@@ -66,7 +71,12 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyCaX4oZnYlz3mY-l-jBIdYUxmFZIT3gSNc"></script>
 		<script type="text/javascript" src="placemarkers.js"></script>
 		<script src="js/map.js"></script>
-    <script src="js/truck.js"></script>
+    <script src="js/order.js"></script>
+
+
+
+
+
 
   </body>
 </html>
