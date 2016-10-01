@@ -17,3 +17,6 @@
 .progress-bar-warning {
     background-color: #f39c12;
 }
+#cumulativebar .cumulativeelement {
+	background-color: #4fa4ff;	
+}

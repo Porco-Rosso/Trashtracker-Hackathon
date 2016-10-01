@@ -12,3 +12,10 @@
  	padding-bottom: 10px;
 	
 }
+
+
+.cumulativeelement{
+	  border-left-style: solid;
+    border-left-width: 1px;
+    border-color: rgba(71, 0, 255, 0.49);
+}
