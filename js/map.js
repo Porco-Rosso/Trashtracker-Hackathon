@@ -18,7 +18,7 @@ $(function () {
 				var truck = new google.maps.Marker({
 				position: trucklocation,
 				map: map,
-				icon: 'http://maps.google.com/mapfiles/ms/icons/truck.png'
+				icon: 'images/truck-logo-small.png'
                 });
         
 
@@ -34,7 +34,7 @@ $(function () {
 
 					marker = new google.maps.Marker({
 						position: new google.maps.LatLng(placemarkers[i][1], placemarkers[i][2]),
-                        icon: 'http://maps.google.com/mapfiles/ms/icons/'+placemarkers[i][4]+'-dot.png'
+            icon: 'http://maps.google.com/mapfiles/ms/icons/'+placemarkers[i][4]+'-dot.png',
 						map: map
 					});
 				
