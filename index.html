@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #mapa_div { height: 100% }
+    </style>
+    <script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCaX4oZnYlz3mY-l-jBIdYUxmFZIT3gSNc&sensor=true">
+    </script>
+    <script type="text/javascript">
+      function inicializar_mapa() {
+        var mapOptions = {
+          center: new google.maps.LatLng(40.4379571,-3.6896047),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("mapa_div"),
+            mapOptions);
+ 
+        var pos = new google.maps.LatLng(40.4379571,-3.6896047);
+ 
+        var marker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            title:"Trash1",
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+            animation: google.maps.Animation.DROP
+        }); 
+ 
+      }
+    </script>
+  </head>
+  <body onload="inicializar_mapa()">
+    <div id="mapa_div" style="width:100%; height:100%"></div>
+  </body>
+</html>
