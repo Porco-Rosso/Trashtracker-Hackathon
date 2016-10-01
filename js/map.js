@@ -1,19 +1,36 @@
 $(function () {
 
-    function initMap() {
+			function initMap() {
 
-        var location = new google.maps.LatLng(40.4379571,-3.6896047);
+				var maporigin = new google.maps.LatLng(40.4379571, -3.6896047);
 
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-            center: location,
-            zoom: 16,
-            panControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
+				var mapCanvas = document.getElementById('map');
+				var mapOptions = {
+					center: maporigin,
+					zoom: 16,
+					panControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				var map = new google.maps.Map(mapCanvas, mapOptions);
 
-    }
+				var marker = new google.maps.Marker({
+					position: maporigin,
+					map: map,
+				});
 
-    google.maps.event.addDomListener(window, 'load', initMap);
-});
+				var marker, i;
+
+				for (i = 0; i < placemarkers.length; i++) {
+					marker = new google.maps.Marker({
+						position: new google.maps.LatLng(placemarkers[i][1], placemarkers[i][2]),
+						map: map
+					});
+				}
+
+
+
+
+				}
+
+				google.maps.event.addDomListener(window, 'load', initMap);
+			});
